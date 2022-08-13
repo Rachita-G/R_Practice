@@ -23,7 +23,7 @@ pchisq(3.65,1) # chi square distribution
 qnorm(0.25) # normal distribution
 qnorm(0.75)
 
-
+summary(mtcars)
 
 ###### Models ######
 lm(Sepal.Length~Sepal.Width, iris)

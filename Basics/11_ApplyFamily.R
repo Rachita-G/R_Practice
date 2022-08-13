@@ -48,3 +48,5 @@ sequence <- function(x){
   seq(nchar(x))
 }
 sapply(c("this" , "is", "random", "vector"), sequence)
+
+

@@ -11,7 +11,7 @@ roll(10)
 
 
 # Conditional Statements
-x <- 1
+x <- -1
 if(x > 0){
   print("positive number")
 } else if (x == 0) {
@@ -20,6 +20,7 @@ if(x > 0){
   print("negative number")
 }
 
+ifelse(x >= 0, "positive", "negative")
 
 switch(EXPR = 1, "first", "second", "third", "forth")
 
