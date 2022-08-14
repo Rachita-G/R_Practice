@@ -27,3 +27,9 @@ summary(mtcars)
 
 ###### Models ######
 lm(Sepal.Length~Sepal.Width, iris)
+glm(Sepal.Length~Sepal.Width, iris)
+
+# t.test()
+# pairwise.test()
+# prop.test()
+# aov

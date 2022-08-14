@@ -17,6 +17,9 @@ c(T, F) && c(F,F)
 
 any(c(F, T, F))
 all(c(F, T, F))
+xor(c(F, T))
+example(xor)
+
 identical(10, 5+5, 90-80)
 all.equal(3, 2+1, 9-7)
 

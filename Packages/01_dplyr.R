@@ -14,7 +14,7 @@ iris %>% select(ends_with("Length")) %>% head()
 iris %>% select(contains("Petal")) %>% head()
 iris %>% select(matches("petal")) %>% head()
 iris %>% select_if(is.numeric) %>% head()
-
+iris %>% top_n(n = 10, wt = Sepal.Length) # top values based on wt param
 
 # we can use ~ for conditional statements and then providing code which results in boolean
 # column of the data should go by dot (.) symbol 

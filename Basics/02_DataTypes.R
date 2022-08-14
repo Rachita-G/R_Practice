@@ -6,6 +6,11 @@ class("char")
 class(TRUE)
 class(charToRaw("Hello")) # "hello" stored as 48 65 6c 6c 6f
 
+x <- "a"
+class(x)
+unclass(x) # temperorily remove the effects of a class
+mode(x)
+
 # data types
 typeof(-9)
 typeof(9L)
@@ -73,4 +78,5 @@ as.integer(9)
 as.factor(c("m", "f"))
 as.factor(c(1,10))
 
+as.Date("20200101", format = '%Y%m%d')
 # others - as.matrix, as.data.frame, as.ts, as.expression

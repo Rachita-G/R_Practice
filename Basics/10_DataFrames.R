@@ -7,6 +7,18 @@ colnames(df)
 names(df)
 df$gender
 dim(df)
+nrow(df)
+ncol(df)
+#rbind(), cbind
+unique(df$gender)
+uniqueN(df$gender)
+rownames(df)
+order(df$age)
+str(df)
+summary(df)
+View(df)
+
+
 
 # all possible combinations of values 
 df2 <- expand.grid(h = c(10, 20), w = c(100, 300), sex = c("m", "f"))
@@ -23,3 +35,6 @@ merge(iris, iris1, by.x = "Species", by.y = "species") # inner
 aggregate(iris$Sepal.Length, by = list(iris$Species), FUN = sum)
 library(dplyr)
 iris %>% group_by(Species) %>% summarise(sum = sum(Sepal.Length))
+
+
+# df[df$age %in% c(12,55)]

@@ -6,7 +6,9 @@ class(vec)
 rev(vec)
 
 vec2 <- c(1,2,6,8,2,1,2)
+length(vec2)
 sort(vec2, decreasing = F)
+order(vec2, na.last  = F)
 rev(vec2)
 rank(vec2)
 table(vec2)
@@ -25,12 +27,24 @@ which(is.na(vec3)) # index where element is NA
 is.finite(vec3) # na is also not finite
 mean(vec3, na.rm = T)
 
+sample(1:10, size = 2) # get 2 samples from set 1:10
+sample(1:10, size = 2, replace = T) # get samples with replacement
+sort(c(1,4,3,6,2,7), decreasing = T) # sorting values in the vector provided
+rep(c(2,4,6), times = 3, each = 2) # repeats each element twice and all of them together thrice!
+seq(from = 4,to = 5, length.out = 10) # spread the numbers between 4 to 5 in range of 10 values
+replicate(n = 10, expr = sample(1:10, size = 2)) # repeats  expr n times
+choose(n = 10, k = 5) # gives the value for nCk in combination - n!/k!(n-k)!
+
+
 
 vec4 <- c(3.3, 4.5, 0.1, 8.9, 10)
 breaks <- c(0, 2,4,6,8,10)
 cut(vec4, breaks)
 cut(vec4, breaks, right = F)
 cut(vec4, breaks, right = F, include.lowest = T)
+
+vec5 <- letters[1:10]
+vec5
 
 # comparisons
 8 %in% 1:9

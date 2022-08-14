@@ -59,3 +59,4 @@ for (i in letters[1:5]){
   print(i)
 }
 
+which(c(3,-8,2,-1) > 0)

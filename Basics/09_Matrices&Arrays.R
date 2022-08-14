@@ -37,8 +37,13 @@ m1["a", "x"]
 dim(m1)
 nrow(m1)
 ncol(m1)
+rowSums(m1)
+colSums(m1)
+rowMeans(m1)
+colMeans(m1)
 t(m1) # transpose
 2*m1# scalar multiplication
+m1*m2 # element wise multiplication
 m1 %*% t(m1) # inner matrix multiplication
 m1 %o% t(m1) # outer matrix multiplication - every scalar with different 
 m2<- matrix(4:9, 2,2)

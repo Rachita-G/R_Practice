@@ -2,7 +2,7 @@
 2*5
 10%%3
 2^3
-10%/%3 # quotient
+10%/%3 # quotient ie, integer devision
 2**3 # also exponent!
 
 ##### Numerical functions #####
@@ -21,11 +21,14 @@ max(1:7)
 min(1:7)
 which.max(c(1,3,9,2)) # return index of maximum number in vector
 which.min(c(2,1,4,7))
+rank(c(3,2,5,7,9,1))
+quantile(c(3,2,5,7,9,1), 0.25)
 
 prod(1:7)
 factorial(7)
 range(1, 10)
 round(3.71542, 3)
+signif(3.167843, 4) 
 log(1)
 log(3, base  = 10)
 exp(0)
@@ -35,6 +38,7 @@ sqrt(9)
 
 mean(c(3,2,1,3))
 var(c(3,2,1,3,4))
+sd(c(3,2,1,3,4))
 cov(c(3,2,1,3,4), c(3,2,1,3,4)) # cov(x,x) = var(x)
 cor(c(3,2,1,3,4), c(3,2,1,3,4)) # cor(x,x) = 1
 

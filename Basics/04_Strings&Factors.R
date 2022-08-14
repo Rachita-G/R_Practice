@@ -21,6 +21,7 @@ cat("hello", "world!") # like concat!
 paste("hello", "world") # by default seperated by space
 paste0("hello", "world") # not sepeated by any space
 paste("hello", "world", sep ="") # specify the seperator
+paste(c(1,2,"r"), collapse = "-")
 sprintf("%s is %f feet tall", "Ashley", 5.1) # formatted printing of string
 
 format(3.17234, digits = 3)

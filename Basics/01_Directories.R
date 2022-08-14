@@ -20,8 +20,10 @@ ls()
 ##### help functions #####
 ?args
 help(log)
+help.search("weighted mean") 
 
 args(round) # arguments required for the function
+example(round)
 
 ###### installing packages #####
 install.packages("readxl")
@@ -29,6 +31,10 @@ library("readxl")
 
 data_dic <- read_excel("Excel 102_Assignment_Rachita_Grover_A5043.xlsx", sheet = 2)
 data_dic
+
+install.packages("dplyr")
+library("dplyr")
+dplyr:select # use particular function from the package
 
 # list installed packages
 installed.packages()
@@ -38,10 +44,12 @@ remove.packages("readxl")
 
 # reading data
 # read.csv, read_excel, read.delim(with separated by \t, or ",")
+# read.table
 # read.fwf (to read file with fixed width format)
 # load("...RData")
 
 ###### Saving Data ######
 ?write.table
+# write.csv, write.excel
 # remember to add row.names = F, to not take in index column as well.
 # save(data, location)
