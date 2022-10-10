@@ -1,6 +1,7 @@
 # creating 2d aray - called matrix
 m1 <- matrix(1:6, nrow = 2, ncol = 3, byrow = TRUE, dimnames = list(c("a", "b"), c("x","y","z")))
 m1
+colnames(m1)
 
 # slicing
 m1[,3]

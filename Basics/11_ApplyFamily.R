@@ -1,7 +1,10 @@
 
 ##### Apply function ######
-apply(mtcars, MARGIN = 1, FUN = sum)
-apply(mtcars, MARGIN = 2, FUN = sum)
+# Only returns in the form of a vector
+head(mtcars)
+apply(mtcars, MARGIN = 1, FUN = sum) # row-wise
+apply(mtcars, MARGIN = 2, FUN = sum) # col-wise , function - median, sd, var
+apply(mtcars, MARGIN = 2, FUN = function(x){sum(is.na(x))}) # self defined function. 1 means na exists
 mtcars$letters <- as.character(as.factor(1:32))
 mtcars$letters
 apply(mtcars, MARGIN = 1, FUN = sum) # can't as now as we have new column is a character
@@ -18,6 +21,8 @@ apply(mtcars[,-length(names(mtcars))], MARGIN = 1, FUN = scaled_data)
 ##### Lapply function ######
 # used to apply in lists, data frame, vector
 
+lapply(c("HI","YOU","ARE","BEAUTIFUL"),tolower) # to lower case
+
 lis <- list("a" = c(1,2,4), "b" =  c(4,5,7))
 lis
 lapply(lis, mean) # apply to each vector in the list
@@ -25,8 +30,8 @@ lapply(lis, mean) # apply to each vector in the list
 df <- as.data.frame(lis)
 lapply(df, min) # applies to each column
 
-lapply(c("this" , "is", "random", "vector"), nchar) # in form of list
-nchar(c("this" , "is", "random", "vector")) # in form of vector
+lapply(c("this" , "is", "random", "vector"), nchar) # returns list
+nchar(c("this" , "is", "random", "vector")) 
 
 
 ##### Sapply function #####
@@ -40,8 +45,9 @@ df <- as.data.frame(lis)
 sapply(df, min)
 lapply(df, min)
 
-lapply(c("this" , "is", "random", "vector"), nchar) # in form of list
-sapply(c("this" , "is", "random", "vector"), nchar) 
+lapply(c("this" , "is", "random", "vector"), nchar) # returns list
+sapply(c("this" , "is", "random", "vector"), nchar) # returns vector
+unlist(lapply(c("this" , "is", "random", "vector"), nchar)) # as vector
 nchar(c("this" , "is", "random", "vector")) # in form of vector
 
 sequence <- function(x){

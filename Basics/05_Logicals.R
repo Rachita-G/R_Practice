@@ -27,3 +27,6 @@ all.equal(3, 2+1, 9-7)
 identical(0.9, 1.1-0.2)
 all.equal(0.9, 1.1-0.2)
 all.equal(0.9, 1.1-0.2, tolerance = 1e-16)
+
+
+is.na(c(NA, 1,2,3))

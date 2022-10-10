@@ -1,14 +1,16 @@
 ##### Arithmetic Operators ####
-2*5
-10%%3
-2^3
+5+5 # add
+6-3 # sub
+2*5 # multiply
+10%%3 # modulo
+2^3 # power
 10%/%3 # quotient ie, integer devision
 2**3 # also exponent!
 
 ##### Numerical functions #####
 length(1:7)
-sum(1:7)
-mean(1:7)
+sum(1:7) 
+mean(c(1:7, NA, 10), na.rm = T)
 median(1:7)
 
 cumsum(1:3)
