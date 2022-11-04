@@ -51,7 +51,7 @@ mtcars %>% rownames_to_column("car") %>% head() # getting index as column with c
 
 
 
-# Re - arranging the data
+# Re - arranging the data - ie, order the data
 iris %>% arrange(desc(Species), Sepal.Length) %>% head()
 iris %>% arrange_all() %>% head()
 iris %>% arrange_if(is.character, desc) %>% head()
@@ -88,7 +88,7 @@ iris %>% summarise_if(is.numeric, sum)
 iris %>% summarise_at(vars(Sepal.Length:Petal.Length), mean)
 
 
-# Summarising on different groups
+# Summarizing on different groups
 iris %>% group_by(Species) %>% summarise(mean(Sepal.Length))
 iris %>% group_by(Species) %>% mutate(avg.sepal.length = mean(Sepal.Length))
 iris %>% group_by(Species) %>% slice(1)
@@ -133,9 +133,12 @@ iris %>%
   filter(Species.x == Species.y, 
          Sepal.Length.x < Sepal.Length.y) %>% head()
 
+iris %>% sample_frac(0.50) # 50% of sample data
+iris %>% sample_frac(0.50, replace = T)  # sampling with replacement used in boostrap sampling
 iris %>% sample_n(50) # pick random sample of rows
 iris %>% sample_n(50) %>% union(sample_n(iris, 75))
 iris %>% sample_n(50) %>% select(-Species) %>% bind_rows(sample(iris, 50, replace = T))
+
 
 iris2 <- iris[1:50, 1:4]
 iris4 <- iris[100:150, 1:4]

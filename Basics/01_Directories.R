@@ -3,6 +3,9 @@
 # clean directory
 rm(list = ls())
 
+# clear the console
+# press ctrl+L
+
 # working directories
 getwd()
 setwd("/cloud/project/Basics")
@@ -17,15 +20,28 @@ ls(all.names = T) # all hidden files as well which starts with dot(.)
 rm(gender)
 ls()
 
-##### help functions #####
+# Flush memory
+install.packages("DataCombine")
+library(DataCombine)
+rmExcept(c("color")) # remove except
+
+##### Help Functions #####
 ?args
-help(log)
+??sample # if dont know the function name type keyword with double ?
+help(log) # help(functionname)
+help(package='dplyr') # opens package documentation
 help.search("weighted mean") 
 
 args(round) # arguments required for the function
 example(round)
+# vignette("tidyr")
 
-###### installing packages #####
+ls("package:graphics") # this lists all the packages in the graphics environment
+search() # list of environments that R will run when an object is requested.
+environment(seq) # shows that "base" is the owner of the sequence function
+environment(arrows) #shows that graphics is the owner of the arrows function
+
+###### Installing Packages #####
 install.packages(c("readxl","dplyr")) # install the packages
 library("readxl") # load the package
 
@@ -47,6 +63,7 @@ remove.packages("readxl") # remove package in installation list
 # 6. ggplot - data visualization package
 # 7. purr - used for better functional programming
 
+
 ###### Reading Data #####
 
 # read.csv() has arguments header, colnames, 
@@ -57,6 +74,7 @@ remove.packages("readxl") # remove package in installation list
 # read.csv2(), read.delim2() when table is seperated by semicolons
 # In read.csv, skip_n argument skips the number of rows written
 # In read.csv, nrow reads the data till that row number
+
 
 ###### Saving Data ######
 ?write.table

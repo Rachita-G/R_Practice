@@ -8,6 +8,14 @@ roll <- function(dice_n = 1){
 roll()
 roll(10)
 
+Add_mul = function(x,y){
+  Cal = x + y
+  cal1 = x*y
+  return(c(Cal, cal1))
+}
+Add_mul(5, 3)
+
+
 
 
 # Conditional Statements
@@ -32,6 +40,21 @@ repeat{
     break
   }
 }
+
+# Fibonacci sequence - Comma sepearted
+fib.a=1
+fib.b=1
+cat(fib.b,",",sep="")
+repeat{
+  temp=fib.a+fib.b
+  fib.a=fib.b
+  fib.b=temp
+  cat(fib.b,",",sep="") # print comma after printing the fib number
+  if(fib.b>200){cat("break now")
+    break
+  }
+}
+
 
 print(count)
 while(count > 0){
@@ -60,3 +83,21 @@ for (i in letters[1:5]){
 }
 
 which(c(3,-8,2,-1) > 0)
+
+
+##### Trycatch
+ls_vec = list(1, 2, 5, 6, "India", 7, 4, 5)
+
+for(i in ls_vec){
+  print(5 + i)
+}
+
+# Use try catch to skip this error
+for(i in ls_vec){
+  tryCatch({
+    print(5 + i)
+  }, error = function(e){print("Non-Numeric")})
+}
+
+
+

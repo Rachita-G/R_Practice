@@ -1,9 +1,21 @@
 # vectors - only one datatype else coverts them to one!
-vec <- c(1,2,"T") # coersion!
+vec <- c(1,2,"T") # coersion! Takes all as string type
 vec
+vec3 <- c(1,2,T, F)
+vec3 # all as int. True =1, False = 0
 vec[-length(vec)] # "-" represents the negation. except the last, print all elements
 class(vec)
 rev(vec)
+
+
+age=c(22,27,30)
+attributes(age)
+names(age)
+names(age)=c("rach","sanj","mom")
+attributes(age)
+names(age)=NULL
+attributes(age)
+
 
 vec2 <- c(1,2,6,8,2,1,2)
 length(vec2)

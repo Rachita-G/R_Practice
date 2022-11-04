@@ -49,3 +49,14 @@ library(dplyr)
 iris %>% group_by(Species) %>% summarise(sum = sum(Sepal.Length))
 iris %>% group_by(Species) %>% summarise_if(is.numeric, sum)
 # df[df$age %in% c(12,55)]
+
+head(mtcars)
+# Convert numeric to categorical/binning
+mtcars$mpgcat[mtcars$mpg >= 10 & mtcars$mpg <= 16] = "Low"
+mtcars$mpgcat[mtcars$mpg > 16 & mtcars$mpg <= 20] = "Medium"
+mtcars$mpgcat[mtcars$mpg > 20] = "High"
+head(mtcars)
+
+# Sorting in ascending order
+mtcars[order(mtcars$mpg, decreasing = F),]
+

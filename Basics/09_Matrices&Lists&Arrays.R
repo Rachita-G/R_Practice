@@ -1,4 +1,4 @@
-# creating 2d aray - called matrix
+# creating 2d array - called matrix
 m1 <- matrix(1:6, nrow = 2, ncol = 3, byrow = TRUE, dimnames = list(c("a", "b"), c("x","y","z")))
 m1
 colnames(m1)
